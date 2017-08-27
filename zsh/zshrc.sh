@@ -11,19 +11,7 @@ server() {
 
 gr () {
   if [[ -z $1 ]] then
-    echo '
-  USAGE:
-
-  gr "Your commit message"
-
-  WHAT IT DOES:
-
-  Commits changes and pushes to remote.
-
-  $ git add .
-  $ git commit -m "Your commit message"
-  $ git push origin master
-  '
+    echo "You must provide a commit message."
   else
     git add .
     git commit -m $1
@@ -33,20 +21,7 @@ gr () {
 
 gc () {
   if [[ -z $1 ]] then
-    echo '
-  USAGE:
-
-  gc git@github.com:username/project.git
-
-  WHAT IT DOES:
-
-  Clones a repo to the desktop and opens it in vscode.
-
-  $ cd ~/Desktop
-  $ git clone git@github.com:username/project.git
-  $ cd $(basename -s .git $1)
-  $ code .
-  '
+    echo "You must provide a valid clone uri."
   else
     cd ~/Desktop
     git clone $1
@@ -57,20 +32,7 @@ gc () {
 
 dp () {
   if [[ -z $1 ]] then
-    echo '
-  USAGE:
-
-  dp project-name
-
-  WHAT IT DOES:
-
-  Creates a new blank project on the Desktop.
-
-  $ cd ~/Desktop
-  $ mkdir project-name
-  $ cd project-name
-  $ code .
-  '
+    echo "You must provide a project name."
   else
     cd ~/Desktop
     mkdir $1
@@ -81,22 +43,7 @@ dp () {
 
 np() {
   if [[ -z $1 ]] then
-    echo '
-  USAGE:
-
-  np project-name
-
-  WHAT IT DOES:
-
-  Sets up a new NodeJS project on the Desktop.
-
-  $ cd ~/Desktop
-  $ mkdir project-name
-  $ cd project-name
-  $ yarn init -y
-  $ touch index.js
-  $ code .
-  '
+    echo "You must provide a project name."
   else
     cd ~/Desktop
     mkdir $1
