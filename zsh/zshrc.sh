@@ -6,7 +6,11 @@ source $ZSH/oh-my-zsh.sh
 alias server="python -m SimpleHTTPServer"
 
 gc () {
-  git add .
-  git commit -m $1
-  git push origin master
+  if [[ -z $1 ]] then
+    echo "You must provide a commit message."
+  else
+    git add .
+    git commit -m $1
+    git push origin master
+  fi
 }
