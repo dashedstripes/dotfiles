@@ -9,7 +9,8 @@ server() {
   python -m SimpleHTTPServer
 }
 
-gc () {
+# Git push to remote
+gr () {
   if [[ -z $1 ]] then
     echo "You must provide a commit message."
   else
