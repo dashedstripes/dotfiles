@@ -28,7 +28,7 @@ gc () {
   fi
 }
 
-desktop-project () {
+dp () {
   if [[ -z $1 ]] then
     echo "You must provide a project name."
   else
@@ -39,7 +39,7 @@ desktop-project () {
   fi
 }
 
-node-project() {
+np() {
   if [[ -z $1 ]] then
     echo "You must provide a project name."
   else
@@ -51,7 +51,3 @@ node-project() {
     code .
   fi
 }
-
-alias dp=desktop-project
-alias np=node-project
-alias home=~/
