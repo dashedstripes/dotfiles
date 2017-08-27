@@ -9,26 +9,6 @@ server() {
   python -m SimpleHTTPServer
 }
 
-ga () {
-  if [[ -z $1 ]] then
-    echo '
-  USAGE:
-
-  ga "Your commit message"
-
-  WHAT IT DOES:
-
-  Commits changes locally.
-
-  $ git add .
-  $ git commit -m "Your commit message"
-  '
-  else
-    git add .
-    git commit -m $1
-  fi
-}
-
 gr () {
   if [[ -z $1 ]] then
     echo '
