@@ -18,3 +18,31 @@ gr () {
     git push origin master
   fi
 }
+
+desktop-project () {
+  if [[ -z $1 ]] then
+    echo "You must provide a project name."
+  else
+    cd ~/Desktop
+    mkdir $1
+    cd $1
+    code .
+  fi
+}
+
+node-project() {
+  if [[ -z $1 ]] then
+    echo "You must provide a project name."
+  else
+    cd ~/Desktop
+    mkdir $1
+    cd $1
+    yarn init -y
+    touch index.js
+    code .
+  fi
+}
+
+alias dp=desktop-project
+alias np=node-project
+alias home=~/
