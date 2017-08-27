@@ -4,9 +4,11 @@ plugins=(git, vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
-alias reload="source ~/.zshrc"
+alias c=clear
+alias r="source ~/.zshrc"
 alias home=~/
 alias desktop=~/Desktop
+
 
 server() {
   open http://localhost:8000
