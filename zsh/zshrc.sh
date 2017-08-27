@@ -19,6 +19,15 @@ gr () {
   fi
 }
 
+gc () {
+  if [[ -z $1 ]] then
+    echo "You must provide a clone uri."
+  else
+    cd ~/Desktop
+    git clone $1
+  fi
+}
+
 desktop-project () {
   if [[ -z $1 ]] then
     echo "You must provide a project name."
