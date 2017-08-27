@@ -4,6 +4,10 @@ plugins=(git, vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
+alias reload="source ~/.zshrc"
+alias home=~/
+alias desktop=~/Desktop
+
 server() {
   open http://localhost:8000
   python -m SimpleHTTPServer
@@ -53,5 +57,3 @@ np() {
     code .
   fi
 }
-
-alias reload="source ~/.zshrc"
