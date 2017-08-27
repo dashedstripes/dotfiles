@@ -9,6 +9,15 @@ server() {
   python -m SimpleHTTPServer
 }
 
+ga () {
+  if [[ -z $1 ]] then
+    echo "You must provide a commit message."
+  else
+    git add .
+    git commit -m $1
+  fi
+}
+
 gr () {
   if [[ -z $1 ]] then
     echo "You must provide a commit message."
@@ -25,6 +34,8 @@ gc () {
   else
     cd ~/Desktop
     git clone $1
+    cd $(basename -s .git $1)
+    code .
   fi
 }
 
