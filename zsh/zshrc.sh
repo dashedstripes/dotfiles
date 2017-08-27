@@ -15,7 +15,7 @@ server() {
 
 gr () {
   if [[ -z $1 ]] then
-    echo "You must provide a commit message."
+    echo "usage: gr \"commit message\""
   else
     git add .
     git commit -m $1
@@ -25,7 +25,7 @@ gr () {
 
 gc () {
   if [[ -z $1 ]] then
-    echo "You must provide a valid clone uri."
+    echo "usage: gc git@github.com:username/project.git"
   else
     cd ~/Desktop
     git clone $1
@@ -36,7 +36,7 @@ gc () {
 
 dp () {
   if [[ -z $1 ]] then
-    echo "You must provide a project name."
+    echo "usage: dp project-name"
   else
     cd ~/Desktop
     mkdir $1
@@ -47,7 +47,7 @@ dp () {
 
 np() {
   if [[ -z $1 ]] then
-    echo "You must provide a project name."
+    echo "usage: np project-name"
   else
     cd ~/Desktop
     mkdir $1
