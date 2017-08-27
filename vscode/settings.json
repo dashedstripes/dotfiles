@@ -1,0 +1,10 @@
+{
+  "workbench.welcome.enabled": false,
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "typescript.check.npmIsInstalled": false,
+  "window.zoomLevel": 0,
+  "elm.formatOnSave": true,
+  "go.formatOnSave": false,
+  "C_Cpp.intelliSenseEngineFallback": "Enabled"
+}
