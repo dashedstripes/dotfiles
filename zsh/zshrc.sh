@@ -9,6 +9,10 @@ alias r="source ~/.zshrc"
 alias home=~/
 alias desktop=~/Desktop
 
+# Hook into cd, show all files on cd.
+chpwd() {
+  ls
+}
 
 server() {
   open http://localhost:8000
