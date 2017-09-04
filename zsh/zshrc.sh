@@ -19,7 +19,8 @@ server() {
   python -m SimpleHTTPServer
 }
 
-gr () {
+# Git Functions
+gr() {
   if [[ -z $1 ]] then
     echo "usage: gr \"commit message\""
   else
@@ -29,7 +30,7 @@ gr () {
   fi
 }
 
-gc () {
+gc() {
   if [[ -z $1 ]] then
     echo "usage: gc git@github.com:username/project.git"
   else
@@ -40,7 +41,8 @@ gc () {
   fi
 }
 
-dp () {
+# Creating new projects
+dp() {
   if [[ -z $1 ]] then
     echo "usage: dp project-name"
   else
@@ -62,4 +64,17 @@ np() {
     touch index.js
     code .
   fi
+}
+
+# Encrypting and decrypting folders
+encrypt() {
+  tar -cf $1.dir $1
+  openssl aes-256-cbc -in $1.dir -out $1.aes
+  rm $1.dir
+}
+
+decrypt() {
+  openssl aes-256-cbc -d -in $1.aes -out $1.dir
+  tar -xf $1.dir
+  rm $1.dir $1.aes
 }
