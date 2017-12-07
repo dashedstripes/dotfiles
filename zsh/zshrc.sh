@@ -78,3 +78,10 @@ decrypt() {
   tar -xf $1.dir
   rm $1.dir $1.aes
 }
+
+# Docker commands
+
+removecontainers() {
+  docker stop $(docker ps -aq)
+  docker rm $(docker ps -aq)
+}
