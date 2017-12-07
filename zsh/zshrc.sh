@@ -30,6 +30,19 @@ gr() {
   fi
 }
 
+gac() {
+  if [[ -z $1 ]] then
+    echo "usage: gac \"commit message\""
+  else
+    git add .
+    git commit -m $1
+  fi
+}
+
+gp() {
+  git push origin master
+}
+
 gc() {
   if [[ -z $1 ]] then
     echo "usage: gc git@github.com:username/project.git"
