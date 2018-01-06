@@ -94,6 +94,10 @@ decrypt() {
 
 # Docker commands
 
+stopall() {
+  docker stop $(docker ps -aq)
+}
+
 removecontainers() {
   docker stop $(docker ps -aq)
   docker rm $(docker ps -aq)
