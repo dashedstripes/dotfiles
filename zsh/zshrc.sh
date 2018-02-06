@@ -3,6 +3,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git, vi-mode)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.bash_profile
 
 alias c=clear
 alias r="source ~/.zshrc"
