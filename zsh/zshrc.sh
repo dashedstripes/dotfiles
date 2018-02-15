@@ -95,11 +95,15 @@ decrypt() {
 
 # Docker commands
 
-stopall() {
+dockerstopall() {
   docker stop $(docker ps -aq)
 }
 
-removecontainers() {
+dockerremovecontainers() {
   docker stop $(docker ps -aq)
   docker rm $(docker ps -aq)
+}
+
+dockerremoveimages() {
+  docker rmi $(docker images -q)
 }
