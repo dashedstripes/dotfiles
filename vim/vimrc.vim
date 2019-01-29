@@ -15,6 +15,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'posva/vim-vue'
 
 " Vundle End
 call vundle#end() 
