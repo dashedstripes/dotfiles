@@ -16,6 +16,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'posva/vim-vue'
+Plugin 'airblade/vim-gitgutter'
 
 " Vundle End
 call vundle#end() 
