@@ -18,7 +18,6 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'posva/vim-vue'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'digitaltoad/vim-pug'
-Plugin 'mxw/vim-jsx'
 
 " Vundle End
 call vundle#end() 
