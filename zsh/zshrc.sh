@@ -107,3 +107,12 @@ dockerremovecontainers() {
 dockerremoveimages() {
   docker rmi $(docker images -q)
 }
+
+# Projects
+
+project-expense() {
+  cd ~/code/expense;
+  code . &
+  nodemon api/index.js &
+  cd client && yarn start;
+}
