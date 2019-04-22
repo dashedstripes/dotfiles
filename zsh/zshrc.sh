@@ -116,3 +116,22 @@ project-expense() {
   nodemon api/index.js &
   cd client && yarn start;
 }
+
+project-chat() {
+  cd ~/code/chat;
+  code . &
+  nf start &
+  open http://localhost:5100;
+}
+
+project-koan() {
+  cd ~/code/koan;
+  code . &
+  nf start;
+}
+
+project-tymer() {
+  cd ~/code/tymer;
+  code . &
+  nf start;
+}
