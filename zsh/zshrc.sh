@@ -80,6 +80,14 @@ np() {
   fi
 }
 
+express-website() {
+  if [[ -z $1 ]] then
+    echo "usage: express-website project-name"
+  else
+    sh ~/.dotfiles/scripts/express-website.sh $1
+  fi
+}
+
 # Encrypting and decrypting folders
 encrypt() {
   tar -cf $1.dir $1
