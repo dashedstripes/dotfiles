@@ -6,5 +6,6 @@
   "window.zoomLevel": 0,
   "elm.formatOnSave": true,
   "go.formatOnSave": false,
+  "editor.acceptSuggestionOnCommitCharacter": false,
   "C_Cpp.intelliSenseEngineFallback": "Enabled"
 }
