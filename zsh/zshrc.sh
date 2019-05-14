@@ -118,8 +118,8 @@ dockerremoveimages() {
 
 # Projects
 
-project-expense() {
-  cd ~/code/expense;
+project-xpense() {
+  cd ~/code/xpense;
   code . &
   nodemon api/index.js &
   cd client && yarn start;
