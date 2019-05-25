@@ -8,16 +8,16 @@ source ~/.bash_profile
 alias c=clear
 alias r="source ~/.zshrc"
 alias home=~/
-alias desktop=~/Desktop
+alias des=~/Desktop
+alias dow=~/Downloads
+alias doc=~/Documents
+alias one=~/OneDrive
+alias cod=~/code
+alias dot=~/.dotfiles
 
 # Hook into cd, show all files on cd.
 chpwd() {
   ls
-}
-
-server() {
-  open http://localhost:8000
-  python -m SimpleHTTPServer
 }
 
 # Git Functions
@@ -55,30 +55,7 @@ gc() {
   fi
 }
 
-# Creating new projects
-dp() {
-  if [[ -z $1 ]] then
-    echo "usage: dp project-name"
-  else
-    cd ~/Desktop
-    mkdir $1
-    cd $1
-    code .
-  fi
-}
-
-np() {
-  if [[ -z $1 ]] then
-    echo "usage: np project-name"
-  else
-    cd ~/Desktop
-    mkdir $1
-    cd $1
-    yarn init -y
-    touch index.js
-    code .
-  fi
-}
+# Generators
 
 express-website() {
   if [[ -z $1 ]] then
@@ -88,31 +65,18 @@ express-website() {
   fi
 }
 
-# Encrypting and decrypting folders
-encrypt() {
-  tar -cf $1.dir $1
-  openssl aes-256-cbc -in $1.dir -out $1.aes
-  rm $1.dir
-}
+# Docker
 
-decrypt() {
-  openssl aes-256-cbc -d -in $1.aes -out $1.dir
-  tar -xf $1.dir
-  rm $1.dir $1.aes
-}
-
-# Docker commands
-
-dockerstopall() {
+docker-stop-all() {
   docker stop $(docker ps -aq)
 }
 
-dockerremovecontainers() {
+docker-remove-containers() {
   docker stop $(docker ps -aq)
   docker rm $(docker ps -aq)
 }
 
-dockerremoveimages() {
+docker-remove-images() {
   docker rmi $(docker images -q)
 }
 
