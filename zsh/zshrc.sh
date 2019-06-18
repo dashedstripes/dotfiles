@@ -1,6 +1,6 @@
 export ZSH=${HOME}/.oh-my-zsh
 ZSH_THEME="robbyrussell"
-plugins=(git, vi-mode)
+plugins=(git vi-mode kubectl)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.bash_profile
@@ -14,6 +14,9 @@ alias doc=~/Documents
 alias one=~/OneDrive
 alias cod=~/code
 alias dot=~/.dotfiles
+alias fav=~/Favish
+
+alias drush="docker-compose exec php drush"
 
 # Hook into cd, show all files on cd.
 chpwd() {
@@ -21,40 +24,6 @@ chpwd() {
 }
 
 # Git Functions
-gr() {
-  if [[ -z $1 ]] then
-    echo "usage: gr \"commit message\""
-  else
-    git add .
-    git commit -m $1
-    git push
-  fi
-}
-
-gac() {
-  if [[ -z $1 ]] then
-    echo "usage: gac \"commit message\""
-  else
-    git add .
-    git commit -m $1
-  fi
-}
-
-gp() {
-  git push origin master
-}
-
-gc() {
-  if [[ -z $1 ]] then
-    echo "usage: gc git@github.com:username/project.git"
-  else
-    cd ~/Desktop
-    git clone $1
-    cd $(basename -s .git $1)
-    code .
-  fi
-}
-
 # Generators
 
 express-website() {
@@ -78,32 +47,4 @@ docker-remove-containers() {
 
 docker-remove-images() {
   docker rmi $(docker images -q)
-}
-
-# Projects
-
-project-xpense() {
-  cd ~/code/xpense;
-  code . &
-  nodemon api/index.js &
-  cd client && yarn start;
-}
-
-project-chat() {
-  cd ~/code/chat;
-  code . &
-  nf start &
-  open http://localhost:5100;
-}
-
-project-koan() {
-  cd ~/code/koan;
-  code . &
-  nf start;
-}
-
-project-tymer() {
-  cd ~/code/tymer;
-  code . &
-  nf start;
 }
