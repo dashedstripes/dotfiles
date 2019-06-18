@@ -1,6 +1,6 @@
 export ZSH=${HOME}/.oh-my-zsh
 ZSH_THEME="robbyrussell"
-plugins=(git vi-mode kubectl)
+plugins=(git vi-mode kubectl docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.bash_profile
