@@ -23,7 +23,16 @@ chpwd() {
   ls
 }
 
-# Git Functions
+# Google Search
+gs() {
+  open "https://www.google.com/search?q=$1"
+}
+
+# Youtube Search
+you() {
+  open "https://www.youtube.com/results?search_query=$1"
+}
+
 # Generators
 
 express-website() {
