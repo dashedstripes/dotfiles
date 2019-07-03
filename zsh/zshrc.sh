@@ -14,7 +14,8 @@ alias doc=~/Documents
 alias one=~/OneDrive
 alias cod=~/code
 alias dot=~/.dotfiles
-alias fav=~/Favish
+alias fav=~/code/favish
+alias per=~/code/personal
 
 alias drush="docker-compose exec php drush"
 
