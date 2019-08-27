@@ -18,6 +18,12 @@ alias fav=~/code/favish
 alias per=~/code/personal
 
 alias drush="docker-compose exec php drush"
+alias kgcc="kubectl get pods  | grep cloud-command | cut -d' ' -f1"
+
+
+alias compi='composer install --ignore-platform-reqs'
+alias compr='composer require --ignore-platform-reqs'
+alias compu='composer update --ignore-platform-reqs'
 
 # Hook into cd, show all files on cd.
 chpwd() {
