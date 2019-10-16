@@ -30,7 +30,6 @@ set autoindent
 set smartindent
 set number
 set showcmd
-set relativenumber
 set shiftwidth=2
 syntax enable
 
@@ -39,6 +38,8 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_max_files = 0
+let g:ctrlp_max_depth = 40
 
 " NerdTree Config
 map <C-n> :NERDTreeToggle<CR>
