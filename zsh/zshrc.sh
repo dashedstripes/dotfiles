@@ -5,6 +5,9 @@ plugins=(git vi-mode kubectl docker docker-compose)
 source $ZSH/oh-my-zsh.sh
 source ~/.bash_profile
 
+COMPOSER_MEMORY_LIMIT=-1
+
+alias minecraft='gcloud beta compute ssh --zone "us-east1-b" "minecraft-server" --project "pateo-304720"'
 alias c=clear
 alias r="source ~/.zshrc"
 alias home=~/
@@ -19,12 +22,13 @@ alias per=~/code/personal
 
 alias drush="docker-compose exec php drush"
 alias kgcc="kubectl get pods  | grep cloud-command | cut -d' ' -f1"
+alias klf="kubectl logs -f --tail=10"
 
 alias compi='composer install --ignore-platform-reqs'
 alias compr='composer require --ignore-platform-reqs'
 alias compu='composer update --ignore-platform-reqs'
 
-alias yr="yarn run lint --fix"
+alias yr="yarn --cwd next run lint"
 
 # Hook into cd, show all files on cd.
 chpwd() {
