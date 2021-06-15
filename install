@@ -1,6 +1,7 @@
 echo "source ${HOME}/.dotfiles/tmux/tmux.conf" > ~/.tmux.conf
 echo "source ${HOME}/.dotfiles/vim/vimrc.vim" > ~/.vimrc
 echo "source ${HOME}/.dotfiles/zsh/zshrc.sh" > ~/.zshrc
+echo "source ${HOME}/.dotfiles/nvim/init.vim" > ~/.config/nvim/init.vim
 
 cat ${HOME}/.dotfiles/vscode/settings.json > ~/Library/Application\ Support/Code/User/settings.json
 
