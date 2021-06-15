@@ -45,3 +45,6 @@ let g:lightline = {
 
 nnoremap <Tab> :NERDTreeToggle<CR>
 nnoremap <C-P> :Files<CR>
+
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
