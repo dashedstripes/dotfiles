@@ -26,6 +26,9 @@ call plug#end()
 
 set number
 set termguicolors
+set tabstop=2
+set shiftwidth=2
+set expandtab
 
 " Colors
 
