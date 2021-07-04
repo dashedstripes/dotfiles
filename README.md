@@ -13,3 +13,4 @@ Clone this repo to your $HOME directory, then run the following script:
 $ ./install
 ```
 
+Honestly, you probably need to do more than that, but you'll work it out.
