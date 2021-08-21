@@ -2,7 +2,7 @@ export ZSH=${HOME}/.oh-my-zsh
 export GIT_EDITOR=nvim
 
 ZSH_THEME="robbyrussell"
-plugins=(git vi-mode kubectl docker docker-compose)
+plugins=(git vi-mode kubectl docker docker-compose zsh-kubectl-prompt)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.bash_profile
@@ -32,5 +32,4 @@ gr() {
 
 # Display current kubectl context https://github.com/superbrothers/zsh-kubectl-prompt
 autoload -U colors; colors
-source /usr/local/etc/zsh-kubectl-prompt/kubectl.zsh
 RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
