@@ -1,6 +1,6 @@
 echo "source ${HOME}/.dotfiles/tmux/tmux.conf" > ~/.tmux.conf
 echo "source ${HOME}/.dotfiles/vim/vimrc.vim" > ~/.vimrc
-echo "source ${HOME}/.vimrc" > !~/.config/nvim/init.vim
+echo "source ${HOME}/.vimrc" > ~/.config/nvim/init.vim
 echo "source ${HOME}/.dotfiles/zsh/zshrc.sh" > ~/.zshrc
 
 echo "Dotfiles are installed!"
